@@ -19,7 +19,6 @@ package ucfg
 
 import (
 	"fmt"
-	"strconv"
 	"strings"
 )
 
@@ -76,9 +75,9 @@ func parsePath(in, sep string) cfgPath {
 }
 
 func parseField(in string) field {
-	if idx, err := strconv.ParseInt(in, 0, 64); err == nil {
-		return idxField{int(idx)}
-	}
+	//if idx, err := strconv.ParseInt(in, 0, 64); err == nil {
+	//	return idxField{int(idx)}
+	//}
 	return namedField{in}
 }
 
